@@ -1,9 +1,11 @@
 .movies {
-  .swiper-slide:nth-child(n + 10) .num {
-    top: 20%;
-    left: -3%;
-    transform: rotate(-90deg);
-    font-size: 15vw;
+  .swiper-slide:nth-child(n + 10) {
+    .num {
+      top: 12%;
+      left: -4%;
+      transform: rotate(-90deg);
+      font-size: 19vw;
+    }
   }
   .movie {
     position: relative;
