@@ -143,6 +143,9 @@ table {
   padding-left: 30px;
   padding-right: 30px;
 }
+.wrapper {
+  overflow: hidden;
+}
 .wrapper.themaBlack {
   background-color: #111;
   color: #fff;
@@ -171,5 +174,42 @@ table {
   > .title {
     margin-bottom: 25px;
     font-size: 30px;
+  }
+}
+
+.swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
+  width: auto;
+  top: -30px;
+  right: 0;
+  left: auto;
+  bottom: auto;
+}
+
+.loading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.loading svg {
+  width: 5vw;
+  height: 5vw;
+  fill: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: rotate_image 2s ease-in-out infinite;
+  transform-origin: 50% 50%;
+}
+
+@keyframes rotate_image {
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
   }
 }
