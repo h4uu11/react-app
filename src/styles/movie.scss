@@ -57,6 +57,8 @@
       position: relative;
       z-index: 2;
       transition: all 0.3s;
+      transition-timing-function: ease-out;
+      transition-delay: 0.5s;
     }
     .img:hover {
       transform: scale(150%);

@@ -6,11 +6,11 @@ function Movie({ index, id, large_cover_image, title, year, genres, summary }) {
     <div className="movie">
       <div className="num">{index + 1}</div>
       <div className="img">
-        <img src={large_cover_image} alt="" />
+        <Link to={`/movie/${id}`}>
+          <img src={large_cover_image} alt="" />
+        </Link>
         <div className="text_wrap">
-          <Link to={`/movie/${id}`} className="title">
-            {title}
-          </Link>
+          <div className="title">{title}</div>
           <div className="year">{year}</div>
           <div className="genre">
             {genres.map((g) => (

@@ -176,10 +176,47 @@ table {
 
 .header {
   padding: 20px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .header .logo {
   width: 150px;
+}
+
+.header .btn_thema {
+  cursor: pointer;
+}
+
+.themaBlack .btn_thema {
+  fill: #fff;
+}
+
+.themaBlack .btn_thema svg:nth-child(1) {
+  display: block;
+}
+
+.themaBlack .btn_thema svg:nth-child(2) {
+  display: none;
+}
+
+.themaWhite .btn_thema {
+  fill: #111;
+}
+
+.themaWhite .btn_thema svg:nth-child(1) {
+  display: none;
+}
+
+.themaWhite .btn_thema svg:nth-child(2) {
+  display: block;
 }
 
 .con {
@@ -200,6 +237,28 @@ table {
   right: 0;
   left: auto;
   bottom: auto;
+}
+
+.swiper-pagination-bullet {
+  background-color: rgba(255, 255, 255, 0.6);
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.swiper-pagination-bullet-active {
+  width: 50px;
+  border-radius: 4px;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: #fff;
+}
+
+.swiper-button-next.swiper-button-disabled,
+.swiper-button-prev.swiper-button-disabled {
+  display: none;
 }
 
 .loading {

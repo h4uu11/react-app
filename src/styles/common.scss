@@ -164,11 +164,38 @@ table {
 
 .header {
   padding: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   .logo {
     width: 150px;
   }
+  .btn_thema {
+    cursor: pointer;
+  }
 }
-
+.themaBlack {
+  .btn_thema {
+    fill: #fff;
+    svg:nth-child(1) {
+      display: block;
+    }
+    svg:nth-child(2) {
+      display: none;
+    }
+  }
+}
+.themaWhite {
+  .btn_thema {
+    fill: #111;
+    svg:nth-child(1) {
+      display: none;
+    }
+    svg:nth-child(2) {
+      display: block;
+    }
+  }
+}
 .con {
   padding: 40px 0;
   > .title {
@@ -187,7 +214,23 @@ table {
   left: auto;
   bottom: auto;
 }
-
+.swiper-pagination-bullet {
+  background-color: rgba(255, 255, 255, 0.6);
+  transition: all 0.3s;
+}
+.swiper-pagination-bullet-active {
+  width: 50px;
+  border-radius: 4px;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+.swiper-button-next,
+.swiper-button-prev {
+  color: #fff;
+}
+.swiper-button-next.swiper-button-disabled,
+.swiper-button-prev.swiper-button-disabled {
+  display: none;
+}
 .loading {
   position: fixed;
   top: 0;
